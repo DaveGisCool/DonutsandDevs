@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { DonutDetails } from '../../interfaces/donut-details';
 import { Result } from '../../interfaces/donuts';
 import { DataRequestService } from '../../services/data-request.service';
@@ -9,14 +10,16 @@ import { DataRequestService } from '../../services/data-request.service';
   styleUrls: ['./donut-details.component.css']
 })
 export class DonutDetailsComponent implements OnInit {
-  @Input() donut: Result;
+  result: Result;
 
   donutdetails: DonutDetails;
 
-  constructor(private donutService:DataRequestService) { }
+  constructor(private route: ActivatedRoute, private donutService:DataRequestService) { }
 
   ngOnInit(): void {
-    this.donutService.getDonutDetails(this.donut.ref).subscribe(
+    this.route.queryParams.subscribe(
+      (data: Result) => this.result = data);
+    this.donutService.getDonutDetails(this.result.ref).subscribe(
       (data: DonutDetails) => this.donutdetails = data);
   }
 

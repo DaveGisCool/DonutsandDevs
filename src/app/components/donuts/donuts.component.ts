@@ -17,7 +17,7 @@ export class DonutsComponent implements OnInit {
   ngOnInit(): void {
     this.donutService.getDonuts().subscribe(
       (data:Donuts) => this.donuts = data
-    )
+    );
   }
 
 }

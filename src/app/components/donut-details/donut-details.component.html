@@ -1,4 +1,4 @@
-<ng-container>
+<ng-container><br />
     <table align="center" 
         border="1" 
         cellpadding="3" 
@@ -6,12 +6,12 @@
         style="width: 500px;">
         <tbody>
             <tr>
-                <td>{{donutdetails.name}}</td>
-                <td>{{donutdetails.calories}} Calories</td>
+                <td>{{result.name}}</td>
+                <td>{{donutdetails?.calories}} Calories</td>
             </tr>
             <tr>
-                <td colspan="2"><img src="{{donutdetails.photo}}" /></td>
+                <td colspan="2"><img src="{{donutdetails?.photo}}" /></td>
             </tr>
         </tbody>
     </table>
-    </ng-container>
+</ng-container>

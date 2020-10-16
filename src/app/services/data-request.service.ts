@@ -8,14 +8,14 @@ import { DonutDetails } from '../interfaces/donut-details'
 })
 export class DataRequestService {
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient) {}
 
   getDonuts(){
     return this.http.get<Donuts>('https://grandcircusco.github.io/demo-apis/donuts.json');
   }
 
   getDonutDetails(id: string){
-    return this.http.get<DonutDetails>('https://grandcircusco.github.io/demo-apis/donuts/{{id}}.json');
+    return this.http.get<DonutDetails>(`http://grandcurcusco.github.io/demo-apis/donuts/${id}.json`);
   }
 }
 
