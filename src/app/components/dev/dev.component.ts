@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Devs, Complete } from '../../interfaces/devs';
 
 @Component({
   selector: 'app-dev',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dev.component.css']
 })
 export class DevComponent implements OnInit {
+  @Input() devs: Devs;
+  complete: Complete;
 
   constructor() { }
 

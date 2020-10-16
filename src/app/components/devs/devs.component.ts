@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Devs } from '../../interfaces/devs';
+import { DevsService } from '../../services/devs.service';
 
 @Component({
   selector: 'app-devs',
@@ -6,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./devs.component.css']
 })
 export class DevsComponent implements OnInit {
+  devs: Devs;
 
-  constructor() { }
+  constructor(private devsService: DevsService) { }
 
   ngOnInit(): void {
+    this.devsService.getDevInfo().subscribe(
+      (data: Devs) => this.devs = data);
   }
 
 }

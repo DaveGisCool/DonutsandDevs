@@ -10,7 +10,7 @@ import { DataRequestService } from '../../services/data-request.service';
   styleUrls: ['./donut-details.component.css']
 })
 export class DonutDetailsComponent implements OnInit {
-  result: Result;
+  @Input() result: Result;
 
   donutdetails: DonutDetails;
 
