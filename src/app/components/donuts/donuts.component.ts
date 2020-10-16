@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DonutDetails } from '../../interfaces/donut-details';
+import { Result } from '../../interfaces/donuts';
+import { Donuts } from '../../interfaces/donuts';
 import { DataRequestService } from '../../services/data-request.service';
 
 @Component({
@@ -8,13 +10,13 @@ import { DataRequestService } from '../../services/data-request.service';
   styleUrls: ['./donuts.component.css']
 })
 export class DonutsComponent implements OnInit {
-  donutdetails: DonutDetails;
+  donuts: Donuts;
 
   constructor(private donutService:DataRequestService) { }
 
   ngOnInit(): void {
-    this.donutService.getDonutDetails(x).subscribe(
-      (data:DonutDetails) => this.donutdetails = data
+    this.donutService.getDonuts().subscribe(
+      (data:Donuts) => this.donuts = data
     )
   }
 

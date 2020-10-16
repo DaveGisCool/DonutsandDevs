@@ -1,5 +1,5 @@
 <p>Here's the donuts!</p>
 
-<div *ngFor="let x of donutdetails">
-    <app-donut-details [donut]="x"></app-donut-details>
-</div>
+<ng-container *ngFor="let x of donuts.results">
+    {{x.name}}<br />
+</ng-container>
