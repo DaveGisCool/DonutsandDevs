@@ -1,11 +1,12 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Devs } from '../interfaces/devs';
+import { Complete, Devs } from '../interfaces/devs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DevsService {
+  devs: Complete[];
 
   constructor(private http: HttpClient) { }
 
