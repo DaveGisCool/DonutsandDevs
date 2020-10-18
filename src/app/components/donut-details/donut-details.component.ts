@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { DonutDetails } from '../../interfaces/donut-details';
-import { Donuts, Result } from '../../interfaces/donuts';
+import { Donuts } from '../../interfaces/donuts';
 import { DataRequestService } from '../../services/data-request.service';
 
 @Component({
@@ -12,7 +12,6 @@ import { DataRequestService } from '../../services/data-request.service';
 export class DonutDetailsComponent implements OnInit {
   donutdetails: DonutDetails;
   donuts: Donuts;
-  result: Result;
 
   constructor(private route: ActivatedRoute, private donutService:DataRequestService) { }
 
@@ -22,5 +21,4 @@ export class DonutDetailsComponent implements OnInit {
     this.donutService.getDonutDetails(this.donutdetails.ref).subscribe(
       (data: DonutDetails) => this.donutdetails = data);
   }
-
 }

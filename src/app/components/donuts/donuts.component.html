@@ -1,6 +1,5 @@
-<p>Here's the donuts!</p>
+<p>Here's the donuts...</p>
 
-<ng-container *ngFor="let x of donuts?.results">
-    <!--<a href="getDonutDetails(x)">{{x.name}}</a><br />-->
-    <a routerLink="/DonutDetails" [queryParams]="x">{{x.name}}</a> <br />
+<ng-container *ngFor="let each of donuts?.results">
+    <a routerLink="/DonutDetails" [queryParams]="each">{{each.name}}</a> <br />
 </ng-container>
