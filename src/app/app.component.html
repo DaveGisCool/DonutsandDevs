@@ -4,10 +4,11 @@
 <app-devs></app-devs>
 <button routerLink="/Donuts">To the Donuts!</button><br />
 <button routerLink="/Devs">To the Devs!</button>-->
+<div *ngIf="showLoading">Loading...</div><br />
 <nav>
     <a routerLink="/Donuts">Donuts</a> | <a routerLink="/Devs">Devs</a>
 </nav>
-<div *ngIf="showLoading">Loading...</div><br />
+
 <router-outlet></router-outlet>
 
 <!--https://grandcircusco.github.io/demo-apis/

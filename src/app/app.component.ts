@@ -7,7 +7,7 @@ import { NavigationEnd, NavigationStart, Router, Event } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'AngularCapstone';
+  title = 'DonutsandDevs';
   showLoading = true;
 
   constructor(private router: Router) {
