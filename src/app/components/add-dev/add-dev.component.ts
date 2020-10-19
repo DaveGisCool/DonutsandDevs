@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-dev.component.css']
 })
 export class AddDevComponent implements OnInit {
+  newDevName: string;
+  newDevYear: string;
+  newDevAccomplishment: string;
 
   constructor() { }
 

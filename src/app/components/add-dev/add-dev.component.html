@@ -1,1 +1,19 @@
-<p>add-dev works!</p>
+<br />
+<ng-container><br />
+    <table align="center" 
+        border="1" 
+        cellpadding="3" 
+        cellspacing="1" 
+        style="width: 500px;">
+        <tbody>
+            <tr>
+                <td><input [(ngModel)]="newDevName" type="text" value="" placeholder="Name"></td>
+                <td><input [(ngModel)]="newDevYear" type="text" value="" placeholder="Year"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input [(ngModel)]="newDevAccomplishment" type="text" value="" placeholder="Accomplishment"></td>
+            </tr>
+        </tbody>
+    </table>
+</ng-container>
+<button (click)="updateDev()">Submit Update</button>

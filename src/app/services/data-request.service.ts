@@ -14,8 +14,8 @@ export class DataRequestService {
     return this.http.get<Donuts>('https://grandcircusco.github.io/demo-apis/donuts.json');
   }
 
-  getDonutDetails(id: string){
-    return this.http.get<DonutDetails>(`http://grandcurcusco.github.io/demo-apis/donuts/${id}.json`);
+  getDonutDetails(link: string){
+    return this.http.get<DonutDetails>(link);
   }
 }
 
